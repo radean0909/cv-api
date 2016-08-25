@@ -1,0 +1,24 @@
+{
+  "name": "cv-api",
+  "version": "1.0.0",
+  "description": "An express/react full-stack app to generate resumes that illustrates my coding abilities",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radean0909/cv-api.git"
+  },
+  "keywords": [
+    "resume",
+    "ryan",
+    "dean"
+  ],
+  "author": "Ryan Dean",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/radean0909/cv-api/issues"
+  },
+  "homepage": "https://github.com/radean0909/cv-api#readme"
+}
