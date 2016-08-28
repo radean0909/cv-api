@@ -10,15 +10,13 @@ import morgan from 'morgan';
 import winston from 'winston';
 
 import Config from './app/boot/config';
-import db from './db';
-
-
+import { mongo } from './db';
 
 // create app
 const app = express();
 const config = new Config();
 
-db(config);
+mongo(config);
 
 // logging
 const logger = morgan(config.logging);
@@ -28,8 +26,6 @@ app.use(bodyParser.json())
 	.use(logger);
 
 router(app);
-
-
 
 app.listen(config.server.port, () => {
 	winston.info('App listening on port %d' , config.server.port);

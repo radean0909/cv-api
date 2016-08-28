@@ -1,6 +1,7 @@
 /** 
  * 	Dependencies
  */
+ 
 import person from './app/controllers/person';
 
 export default (app) => {
@@ -11,6 +12,14 @@ export default (app) => {
 	});
 
 	app.get('/person', person.get);
-	app.post('/person', person.post)
+	app.get('/person/:id', person.get);
+
+	app.post('/person', person.create);
+
+	app.put('/person/:id', person.update);
+	app.put('/person/addView/:id', person.addView);
+	app.delete('/person/:id', person.remove);
+	app.delete('/person/:id/:force', person.remove);
+
 
 }

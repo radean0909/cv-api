@@ -3,49 +3,14 @@
  */
 
 import mongoose from 'mongoose';
-
-
+import Education from './education';
+import Employer from './employer';
+import Project from './project';
+import Strength from './strength';
 
 const Schema = mongoose.Schema;
 
-const educationSchema = new Schema({
-	name: String,
-	type: String,
-	school: String,
-	city: String,
-	state: {type: String, maxLength:2},
-	startDate: String,
-	endDate: String,
-	status: String,
-	achievements: [String]
-});
-
-const employerSchema = new Schema({
-	name: String,
-	title: String,
-	startDate: String,
-	endDate: String,
-	description: String,
-	challenges: [String],
-	achievements: [String]
-});
-
-const projectSchema = new Schema({
-	name: String,
-	type: String,
-	url: String,
-	repo: String,
-	startDate: String,
-	description: String
-});
-
-const strengthSchema = new Schema({
-	name: String,
-	score: { type:Number, min: 1, max: 10 },
-	skills: [String]
-});
-
-const applicantSchema = new Schema({
+const personSchema = new Schema({
 	name: String,
 	title: String,
 	email: String,
@@ -53,11 +18,13 @@ const applicantSchema = new Schema({
 	city: String,
 	state: {type: String, maxLength: 2},
 	image: String,
-	employers: [employerSchema],
-	strengths: [strengthSchema],
-	education: [educationSchema],
-	projects: [projectSchema]
+	employers: [Employer],
+	strengths: [Strength],
+	education: [Education],
+	projects: [Project],
+	views: {type: Number, default: 0},
+	deleted: Boolean
 });
 
-export default mongoose.model('Applicant', applicantSchema);
+export default mongoose.model('Person', personSchema);
 	
