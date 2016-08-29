@@ -23,7 +23,8 @@ const logger = morgan(config.logging);
 
 app.use(bodyParser.json())
 	.use(bodyParser.urlencoded({extended: true}))
-	.use(logger);
+	.use(logger)
+	.use(express.static('client/build'));
 
 router(app);
 
