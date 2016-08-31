@@ -27,7 +27,7 @@ store.dispatch({
 		projects: [
 		{
 		  name: "ELLIS (Electronic Life Improvement System)",
-		  description: "A Node/React interface for a homemade Raspberry Pi Alarm Clock. The alarm clock sets sleep and wake cycles through worker processes to aide in falling asleep gently, and waking gradually, with several different personalization settings",
+		  description: "The alarm clock sets sleep and wake cycles, through worker processes, to aide in falling asleep gently and waking gradually, with several different personalization settings.",
 		  repo: "http://www.github.com/radean0909/ellis",
 		  startDate: "August 2016",
 		}
