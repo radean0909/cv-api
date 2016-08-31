@@ -7,7 +7,7 @@
  const config = {
  	development: {
  		 mongo: {
- 		 	uri: 'mongodb://localhost/cv'
+ 		 	uri: 'mongodb://<dbuser>:<dbpassword>@ds147965.mlab.com:47965/cv'
 	 	},
 	 	sqlLite: {
 
@@ -23,7 +23,7 @@
  	},
  	production: {
  	 	mongo: {
- 	 		uri: 'mongodb://localhost/cv'
+ 	 		uri: process.env.MOGNO_CONNECTION
 	 	},
 	 	sqlLite: {
 
@@ -39,7 +39,7 @@
 	 	},
 	 	logging: 'dev',
 	 	server: {
-	 		port: 8080
+	 		port: process.env.PORT
 	 	}
  	}
 
