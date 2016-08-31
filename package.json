@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "webpack && cd client && npm run build",
+    "prestart": "cd client && npm run build",
     "start": "node lib/bundle.js",
+    "postinstall": "webpack",
     "dev": "NODE_ENV=development babel-node src/server.js"
   },
   "repository": {
