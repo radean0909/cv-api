@@ -23,7 +23,7 @@
  	},
  	production: {
  	 	mongo: {
- 	 		uri: process.env.MOGNO_CONNECTION
+ 	 		uri: process.env.MONGO_CONNECTION
 	 	},
 	 	sqlLite: {
 
