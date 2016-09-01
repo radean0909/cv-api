@@ -4,6 +4,7 @@ import FontAwesome from 'react-fontawesome';
 import Basic from './basic';
 import Content from './content';
 import Footer from './footer';
+import Header from './header';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { connect } from 'react-redux';
 
@@ -13,9 +14,12 @@ export const CV = React.createClass({
   render: function () {
     return (
       <div className="container">
-        <div className="CV row">
-          <Basic {...this.props} />
-          <Content {...this.props} />
+        <div className="CV">
+          <Header {...this.props} />
+          <div className="row row-same-height">
+            <Basic {...this.props} />
+            <Content {...this.props} />
+          </div>
         </div>
         <Footer />
       </div>

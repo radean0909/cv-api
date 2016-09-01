@@ -9,7 +9,7 @@ class Intro extends Component {
 			return { __html: intro.replace(/<script.*?>.*?<\/script>/igm, '') };
 		}
 		return (
-			<div className="row row-no-padding">
+			<div className="row">
 	          <div className="jumbotron jumboptron-fluid">
 	            <h1 className="display-3">{this.props.name} <small className="text-muted">{this.props.tagline}</small></h1>
 	            <p className="lead" dangerouslySetInnerHTML={introHTML(this.props.intro)} />

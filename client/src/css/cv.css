@@ -80,14 +80,15 @@
   font-style: normal;
 }
 
-.CV.row {
-  overflow: hidden;
+.header, .row-same-height {
+  overflow:hidden;
 }
 
-.CV.row [class*="col-"]{
+.header.row [class*="col-"], .row-same-height [class*="col-"]{
   margin-bottom: -100%;
   padding-bottom: 100%;
 }
+
 
 .basic .photo {
   text-align: center;
@@ -96,7 +97,9 @@
 .basic {
   background-color: #425370;
   padding: 20px;
+  margin-top: -15px;
   height: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .basic img {

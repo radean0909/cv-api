@@ -12,8 +12,9 @@ export const Bio = React.createClass({
 	        	<Photo image={this.props.image} name={this.props.name} />
 				<h4><FontAwesome name="envelope" /> {this.props.email}</h4>
 				<h4><FontAwesome name="phone" /> {this.props.phone}</h4>
-				<h5><small>{this.props.city}, {this.props.state}</small></h5>
+				<h4><FontAwesome name="map-o" /> {this.props.city}, {this.props.state}</h4>
 			</div>
+
 		)
 	}
 });
