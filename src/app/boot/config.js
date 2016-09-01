@@ -30,7 +30,7 @@
 	 	},
 	 	logging: 'dev',
 	 	server: {
-	 		port: process.env.PORT || 8080.
+	 		port: process.env.PORT || 8080,
 	 		url: process.env.HEROKU_URI || 'http://localhost' 
 	 	}
  	}
