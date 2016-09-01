@@ -9,8 +9,7 @@ const Schema = mongoose.Schema;
 let employerSchema = new Schema({
 	name: String,
 	title: String,
-	startDate: String,
-	endDate: String,
+	dates: String,
 	description: String,
 	difficulties: String,
 	achievements: String
