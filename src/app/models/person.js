@@ -13,7 +13,7 @@ const Schema = mongoose.Schema;
 
 const personSchema = new Schema({
 	name: String,
-	title: String,
+	tagline: String,
 	email: String,
 	phone: String,
 	city: String,
