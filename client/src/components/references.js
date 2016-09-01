@@ -13,9 +13,9 @@ export const References = React.createClass({
                 <h3><FontAwesome name="check-square-o" inverse /> References</h3>
                 <br />
                 {this.props.references.map(function (ref, i) {
-                    const quote = <blockquote>
+                    const quote = (ref.quote) ? <blockquote>
                               <p className="m-b-0">"{ref.quote}"</p>
-                            </blockquote>;
+                            </blockquote> : null;
                     return ( 
                         <div key={'reference-' + i}>
                             <h5>{ref.name}</h5> 
