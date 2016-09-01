@@ -11,17 +11,17 @@ export const Employer = React.createClass({
 			return { __html: html.replace(/<script.*?>.*?<\/script>/igm, '') }; 
     	}
 
-    	const achievements = (this.props.data.get('achievements')) ? <p><strong>Achievements: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.get('achievements'))} /></p> : null;
-    	const challenges = (this.props.data.get('difficulties')) ? <p><strong>Challenges: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.get('difficulties'))} /></p> : null;
+    	const achievements = (this.props.data.achievements) ? <p><strong>Achievements: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.achievements)} /></p> : null;
+    	const challenges = (this.props.data.difficulties) ? <p><strong>Challenges: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.difficulties)} /></p> : null;
     	return (
     		<div className="row">
 	    		<div className="col-lg-3">
-		    		<h5>{this.props.data.get('name')}</h5>
-		    		<h6>{this.props.data.get('title')}</h6>
-		    		<small>{this.props.data.get('dates')}</small>
+		    		<h5>{this.props.data.name}</h5>
+		    		<h6>{this.props.data.title}</h6>
+		    		<small>{this.props.data.dates}</small>
 		    	</div>
 		    	<div className="col-lg-9">
-		    		<p><strong>Description: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.get('description'))} /></p>
+		    		<p><strong>Description: </strong><span dangerouslySetInnerHTML={parsedHTML(this.props.data.description)} /></p>
 		    		{achievements}
 		    		{challenges}
 	    		</div>

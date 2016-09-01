@@ -6,9 +6,9 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 export const Strength = React.createClass({
     mixins: [PureRenderMixin],
     render: function() {
-    	const name = this.props.data.get('name');
-    	const score = this.props.data.get('score');
-    	const skills = this.props.data.get('skills');
+    	const name = this.props.data.name;
+    	const score = this.props.data.score;
+    	const skills = this.props.data.skills;
     	const bars = function(score) {
     		let out = [];
     		for( let i = 1; i <= score; i++ ) {
@@ -30,7 +30,7 @@ export const Strength = React.createClass({
 		        {bars(score)}
 		        <div className="skills">
 		        	{skills.map(function(skill, i) {
-	        			if (i < skills.size - 1)
+	        			if (i < skills.length - 1)
 	        				return <span key={'strengths-' + name + '-' + i} dangerouslySetInnerHTML={skillHTML(skill)} />
 	        			else
 	        				return <span key={'strengths-' + name + '-' + i} dangerouslySetInnerHTML={skillHTML(skill, true)} />

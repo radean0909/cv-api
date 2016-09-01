@@ -3,6 +3,8 @@ import '../css/cv.css';
 import FontAwesome from 'react-fontawesome';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+
+
 export const References = React.createClass({
     mixins: [PureRenderMixin],
     render: function() {
@@ -13,11 +15,11 @@ export const References = React.createClass({
                 {this.props.references.map(function (ref, i) {
                     return ( 
                         <div key={'reference-' + i}>
-                            <h5>{ref.get('name')}</h5> 
-                            <h5><small className="text-muted">{ref.get('title')} - {ref.get('company')}</small></h5>
-                            <h6><FontAwesome name="envelope" /> {ref.get('email')}</h6>
+                            <h5>{ref.name}</h5> 
+                            <h5><small className="text-muted">{ref.title} - {ref.company}</small></h5>
+                            <h6><FontAwesome name="envelope" /> {ref.email}</h6>
                             <blockquote>
-                              <p className="m-b-0">"{ref.get('quote')}"</p>
+                              <p className="m-b-0">"{ref.quote}"</p>
                             </blockquote>
                         </div> 
                     )

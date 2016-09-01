@@ -12,8 +12,8 @@ let employerSchema = new Schema({
 	startDate: String,
 	endDate: String,
 	description: String,
-	challenges: [String],
-	achievements: [String]
+	difficulties: String,
+	achievements: String
 });
 
 

@@ -5,6 +5,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './routes';
+import cors from 'cors';
 
 import morgan from 'morgan';
 import winston from 'winston';
@@ -24,6 +25,7 @@ const logger = morgan(config.logging);
 app.use(bodyParser.json())
 	.use(bodyParser.urlencoded({extended: true}))
 	.use(logger)
+	.use(cors())
 	.use(express.static('client/build'));
 
 router(app);
