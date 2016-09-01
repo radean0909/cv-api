@@ -95,6 +95,7 @@
     "marked": "^0.3.6",
     "mongoose": "^4.5.10",
     "morgan": "^1.7.0",
+    "node-sass": "^3.8.0",
     "react": "^15.3.1",
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -104,6 +105,7 @@
     "react-router": "^2.7.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.1",
     "winston": "^2.2.0"
   }
 }

@@ -1,0 +1,263 @@
+/* Fonts */
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-Bold.eot');
+  src: url('../fonts/FuturaLT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-Bold.woff') format('woff'),
+    url('../fonts/FuturaLT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-ExtraBold.eot');
+  src: url('../fonts/FuturaLT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-ExtraBold.woff') format('woff'),
+    url('../fonts/FuturaLT-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT.eot');
+  src: url('../fonts/FuturaLT.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT.woff') format('woff'),
+    url('../fonts/FuturaLT.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-LightOblique.eot');
+  src: url('../fonts/FuturaLT-LightOblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-LightOblique.woff') format('woff'),
+    url('../fonts/FuturaLT-LightOblique.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-Heavy.eot');
+  src: url('../fonts/FuturaLT-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-Heavy.woff') format('woff'),
+    url('../fonts/FuturaLT-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-Oblique.eot');
+  src: url('../fonts/FuturaLT-Oblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-Oblique.woff') format('woff'),
+    url('../fonts/FuturaLT-Oblique.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-BoldOblique.eot');
+  src: url('../fonts/FuturaLT-BoldOblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-BoldOblique.woff') format('woff'),
+    url('../fonts/FuturaLT-BoldOblique.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura LT';
+  src: url('../fonts/FuturaLT-Light.eot');
+  src: url('../fonts/FuturaLT-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaLT-Light.woff') format('woff'),
+    url('../fonts/FuturaLT-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/Domine-Regular.eot');
+  src: url('../fonts/Domine-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Domine-Regular.woff') format('woff'),
+    url('../fonts/Domine-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domine';
+  src: url('../fonts/Domine-Bold.eot');
+  src: url('../fonts/Domine-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Domine-Bold.woff') format('woff'),
+    url('../fonts/Domine-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Variables */
+
+$nav-bg-color: #425370;
+$intro-bg-color: #000000;
+$content-bg-color: #ffffff;
+$body-bg-color: #969593;
+
+$primary-color: #D9D9D9;
+$accent-color: #7CE5EA;
+$highlight-color: #ffffff;
+$content-highlight-color: #000000;
+$secondary-color: #425370;
+$content-color: #353535;
+
+$Futura: 'Futura LT';
+$Domine: 'Domine';
+
+
+
+/**  BODY  **/
+body {
+  background: $body-bg-color;
+  color: $primary-color;
+  font-family: sans-serif;
+
+  h1, h2, h3 {
+    color: $highlight-color;
+    font-family: $Futura;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px $content-color;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+
+  /* no padding override */
+  .row-no-padding {
+    [class*="col-"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* row-same-height */
+  .row-same-height, .header.row {
+    overflow:hidden;
+    [class*="col-"] {
+      margin-bottom: -100%;
+      padding-bottom: 100%;
+    }
+  }
+
+  /* Basic */
+  .basic {
+    background-color: $nav-bg-color;
+    padding: 20px;
+    margin-top: -15px;
+    height: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    
+    strong {
+      color: $highlight-color;
+    }
+
+    h4, h5 {
+      color: $accent-color;
+      font-family: $Futura;
+    }
+
+    img {
+      width: 15em;
+      border-radius: 50%;
+    }
+
+    .photo {
+      text-align: center;
+    }
+
+    /* circular border */
+    .img-container {
+      line-height: 0;   /* remove line-height */ 
+      display: inline-block;  /* circle wraps image */
+      margin: 5px;
+      border-radius: 50%; /* relative value */
+      border: 3px solid white;/* border width   */
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.4);  
+      transition: linear 0.25s;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  /* Content */
+  .content {
+    background: $content-bg-color;
+
+    h3 {
+      color: $secondary-color;
+      font-family: $Futura;
+      text-shadow: 1px 1px $primary-color;
+    }
+
+    h4, h5 {
+      color: $content-highlight-color;
+      font-family: $Futura;
+    }
+
+    h6, small {
+      color: $secondary-color
+    }
+
+    p {
+      line-height: 1rem;
+      color: $content-color;
+    }
+  }
+
+  /* Footer */
+  .footer {
+    background: $intro-bg-color;
+    padding: 15px;
+    text-align: center;
+
+    strong {
+      color: $accent-color;
+    }
+  }
+
+  /* Lead */
+  .lead {
+    line-height: 1.5rem !important;
+    color: $primary-color !important;
+
+    strong {
+      color: $accent-color;
+    }
+  }
+
+  .jumbotron {
+    background: $intro-bg-color;
+    border-radius: 0px
+  }
+
+  .experience, .projects {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+}

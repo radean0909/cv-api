@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/cv.css';
+import '../css/cv.scss';
 import FontAwesome from 'react-fontawesome';
 import Experience from './experience';
 import Projects from './projects';

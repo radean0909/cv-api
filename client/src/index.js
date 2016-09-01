@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { CVContainer } from './components/cv';
-import './css/index.css';
 import {Router, Route} from 'react-router';
 import ReactGA from 'react-ga';
 
