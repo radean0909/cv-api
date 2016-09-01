@@ -2,7 +2,7 @@
  * 	Dependencies
  */
 import fetch from 'isomorphic-fetch';
-import Config from '../src/app/boot';
+import Config from '../../src/app/boot/config';
 
 const config = new Config();
 
