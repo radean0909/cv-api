@@ -26,7 +26,6 @@ export default function(state = Map(), action) {
   case 'VISIT':
     return visit(state);
   case 'REQUEST_PERSON':
-    console.log('REQUEST_PERSON', action);
     return getPerson(action);
   case 'RESPONSE_PERSON':
     return savePerson(action.person);

@@ -24,7 +24,6 @@ export const CV = React.createClass({
 });
 
 function mapStateToProps(state) {
-  console.log(state.get('strengths'));
   return {
     email: state.get('email'),
     phone: state.get('phone'),
