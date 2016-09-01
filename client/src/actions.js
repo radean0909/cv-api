@@ -2,9 +2,7 @@
  * 	Dependencies
  */
 import fetch from 'isomorphic-fetch';
-import Config from '../config/config';
 
-const config = new Config();
 
 function getPerson(person) {
 	return {
