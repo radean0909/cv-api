@@ -21,7 +21,7 @@ function savePerson(person) {
 }
 
 function fetchPerson(person) {
-	return fetch('//' + config.server.url + ':' + config.server.port + '/person/' + person);
+	return fetch('//ryan-cv.herokuapp.com/person/' + person);
 }
 
 export function doView() {
