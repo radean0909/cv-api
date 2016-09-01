@@ -8,26 +8,17 @@
  	development: {
  		 mongo: {
  		 	uri:  process.env.MONGO_CONNECTION || 'mongodb://localhost/cv'
-	 	},
-	 	sqlLite: {
-
 	 	}
  	},
  	test: {
 	 	mongo: {
 	 		uri: 'mongodb://localhost/cv'
-	 	},
-	 	sqlLite: {
-
 	 	}
  	},
  	production: {
  	 	mongo: {
  	 		uri: process.env.MONGO_CONNECTION || 'mongodb://localhost/cv'
-	 	},
-	 	sqlLite: {
-
-	 	},
+	 	},	 	
 	 	logging: 'tiny'
  	},
  	defaults: {
@@ -39,7 +30,8 @@
 	 	},
 	 	logging: 'dev',
 	 	server: {
-	 		port: process.env.PORT || 8080 
+	 		port: process.env.PORT || 8080.
+	 		url: process.env.HEROKU_URI || 'http://localhost' 
 	 	}
  	}
 

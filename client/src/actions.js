@@ -2,6 +2,9 @@
  * 	Dependencies
  */
 import fetch from 'isomorphic-fetch';
+import Config from '../src/app/boot';
+
+const config = new Config();
 
 function getPerson(person) {
 	return {
@@ -18,8 +21,7 @@ function savePerson(person) {
 }
 
 function fetchPerson(person) {
-	console.log('fetching:',person)
-	return fetch('//localhost:8080/person/' + person);
+	return fetch('//' + config.server.url + ':' + config.server.port + '/person/' + person);
 }
 
 export function doView() {
