@@ -42,7 +42,8 @@ function mapStateToProps(state) {
     education: state.get('education'),
     strengths: state.get('strengths'),
     employers: state.get('employers'),
-    references: state.get('references')
+    references: state.get('references'),
+    website: state.get('website')
   }
 }
 
