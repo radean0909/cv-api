@@ -18,7 +18,8 @@ export const Header = React.createClass({
 		              city={this.props.city} 
 		              state={this.props.state} 
 		              email={this.props.email}
-		              linkedin={this.props.linkedin} />
+		              linkedin={this.props.linkedin}
+		              website={this.props.website} />
 		        </div>
 		        <div className="content col-lg-9">
 	            	<Intro name={this.props.name} tagline={this.props.tagline} intro={this.props.intro} />

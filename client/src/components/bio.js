@@ -13,6 +13,7 @@ export const Bio = React.createClass({
 				<h4><FontAwesome name="envelope" /> {this.props.email}</h4>
 				<h4><FontAwesome name="phone" /> {this.props.phone}</h4>
 				<h4><FontAwesome name="map-o" /> {this.props.city}, {this.props.state}</h4>
+				<h4><FontAwesome name="home" /> {this.props.website}</h4>
 			</div>
 
 		)

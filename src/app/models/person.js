@@ -26,6 +26,7 @@ const personSchema = new Schema({
 	references: [Reference],
 	projects: [Project],
 	views: {type: Number, default: 0},
+	website: String,
 	deleted: Boolean
 });
 
