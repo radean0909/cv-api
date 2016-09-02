@@ -33,3 +33,5 @@ router(app);
 app.listen(config.server.port, () => {
 	winston.info('App listening on port %d' , config.server.port);
 });
+
+export default app;

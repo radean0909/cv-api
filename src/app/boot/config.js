@@ -2,7 +2,7 @@
  * Dependencies 
  */
 
- import _ from 'lodash';
+ import merge from 'object-merge';
 
  const config = {
  	development: {
@@ -12,7 +12,7 @@
  	},
  	test: {
 	 	mongo: {
-	 		uri: 'mongodb://localhost/cv'
+	 		uri: 'mongodb://localhost/cv_test'
 	 	}
  	},
  	production: {
@@ -38,10 +38,6 @@
  };
 
  export default function() {
- 	const env = process.env.NODE_ENV | 'defaults';
-
- 	if (env !== 'defaults')
- 		return _.defaultsDeep(config[env], config.defaults); //overwrite teh defaults with the environment settings
- 	else
- 		return config.defaults;
+ 	const env = process.env.NODE_ENV || 'defaults';	
+ 	return merge( config.defaults, config[env]); //overwrite the defaults with the environment settings
  }
