@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "mocha": "mocha src/tests --recursive --timeout 30000",
-    "test": "NODE_ENV=test&& mocha-webpack --webpack-config webpack.config.js \"src/test/*.test.js\"",
-    "start": "node lib/bundle.js",
+    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.config.js \"src/test/*.test.js\"",
+    "start": "NODE_ENV=production node lib/bundle.js",
     "postinstall": "webpack && cd client && npm run build",
     "prestart": "webpack && cd client && npm run build",
     "dev": "NODE_ENV=development babel-node src/server.js"

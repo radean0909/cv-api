@@ -28,7 +28,6 @@ const routes = (
 	<Route component={CVContainer} >
 		<Route path="/resume" component={CVContainer} />
 		<Route path="/" component={CVContainer} />
-		<Route path="/pdf" component={PDF} />
 	</Route>
 );
 
