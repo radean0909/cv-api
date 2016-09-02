@@ -12,10 +12,9 @@ let educationSchema = new Schema({
 	school: String,
 	city: String,
 	state: {type: String, maxLength:2},
-	startDate: String,
-	endDate: String,
+	dates: String,
 	status: String,
-	achievements: [String]
+	achievements: String
 });
 
 
